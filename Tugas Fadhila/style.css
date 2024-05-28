@@ -1,0 +1,177 @@
+body {
+    margin: 0;
+    font-family: Arial, sans-serif;
+    display: flex;
+    flex-direction: column;
+    min-height: 100vh;
+}
+
+header {
+    position: relative;
+    /* background: linear-gradient(to right, #3523A9, #aca5a5); */
+    background: #3523A9;
+    color: #fff;
+    padding: 1rem;
+    text-align: center;
+}
+
+.email-link{
+    text-decoration: none;
+    color: white;
+}
+
+.email-link:hover {
+    color: #6cafe6;
+}
+
+.floating-icons span {
+    display: inline-block;
+    animation: floatAnimation 4s infinite ease-in-out;
+}
+
+@keyframes floatAnimation {
+    0% {
+        transform: translateY(0);
+    }
+    50% {
+        transform: translateY(-20px);
+    }
+    100% {
+        transform: translateY(0);
+    }
+}
+
+nav {
+    display: flex;
+    justify-content: flex-end;
+    background-color: #e5e5ff;
+
+    padding: 0.5rem;
+}
+
+nav a {
+    margin: 0 1rem;
+    text-decoration: none; 
+    color: #fff; 
+}
+
+nav i {
+    width: 28px;
+    height: 28px;
+    transition: transform 0.3s ease; 
+}
+
+nav a:hover i {
+    transform: scale(1.2);
+}
+
+.container {
+    display: flex;
+    flex: 1;
+    flex-direction: row;
+    flex-wrap: wrap;
+}
+
+.sidebar {
+    flex: 1;
+    background: white;
+}
+
+.sidebar h3 {
+    margin-left: 1rem;
+}
+
+.riwayatPendidikan {
+    padding: 0rem 1rem 1rem 1rem;
+}
+
+main {
+    flex: 2;
+    padding: 1rem 1rem 0rem 1rem;
+}
+
+.bio-container {
+    display: flex;
+    flex-direction: row;
+    align-items: flex-start;
+}
+
+.profile-photo {
+    width: 225px; 
+    height: 350px; 
+    margin-right: 1rem;
+    border-radius: 8px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); 
+    transition: transform 0.3s ease, box-shadow 0.3s ease; 
+}
+
+.profile-photo:hover {
+    transform: scale(1.1); 
+    box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2); 
+}
+
+.bio-data {
+    flex: 1;
+    text-align: justify;
+}
+
+.bio-data p {
+    line-height: 1.5; 
+}
+
+footer {
+    background: #3523A9;
+    color: #fff;
+    padding: 1rem;
+    text-align: center;
+}
+
+table {
+    width: 100%;
+    border-collapse: collapse;
+}
+
+table, th, td {
+    border: 2px solid #ddd;
+}
+
+th, td {
+    padding: 8px;
+}
+
+th {
+    background-color: #3523A9;
+    text-align: center;
+}
+
+table tr:hover {
+    background-color: #6cafe6;
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+    .container {
+        flex-direction: column;
+    }
+
+    nav {
+        flex-direction: row; 
+        /* justify-content: center;  */
+        align-items: center; 
+    }
+
+    nav a {
+        margin: 0 0.5rem; 
+    }
+
+    .bio-container {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .profile-photo {
+        margin-right: 0;
+        margin-bottom: 1rem;
+    }
+
+}
